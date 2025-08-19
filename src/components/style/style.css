@@ -173,6 +173,12 @@ body {
 }
 
 /* Canvas */
+.app-canvas-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
 .app-canvas {
   position: relative;
   min-height: 8em;
@@ -182,6 +188,12 @@ body {
   padding: 1.5em;
   border-radius: var(--border-radius);
   border: 1px solid var(--color-silver);
+  flex: 1;
+}
+
+.app-canvas--large {
+  min-height: 600px;
+  max-width: none;
 }
 
 .app-canvas:before {
@@ -190,7 +202,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 5em;
+  bottom: 4em;
   background-image: -webkit-repeating-radial-gradient(
     top center,
     rgba(0, 0, 0, 0.1),
@@ -207,7 +219,7 @@ body {
   top: 1.5em;
   left: 1.5em;
   right: 1.5em;
-  bottom: 4em;
+  bottom: 3em;
   overflow: hidden;
   opacity: 0.1;
   transition: all 0.3s ease;
@@ -254,10 +266,10 @@ body {
   padding-top: 1em;
   margin-bottom: -0.5em;
   height: 30px;
-}
-
-.app-handlers > * {
-  margin-right: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .app-handlers button {
@@ -304,7 +316,7 @@ body {
 .app-handlers .app-handlers__div {
   display: inline-block;
   vertical-align: middle;
-  padding-left: 0.5em;
+  margin-left: 0.5em;
   font-size: var(--font-size__tiny);
 }
 
@@ -534,3 +546,6 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+/* Import LayersPanel styles */
+@import './LayersPanel.css';

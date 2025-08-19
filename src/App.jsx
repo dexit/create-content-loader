@@ -389,12 +389,12 @@ class App extends Component {
 
               <LearnMore />
             </div>
-          </div>
-        </div>
+  max-width: 1600px;
+  max-width: 1600px;
 
         <Gallery />
       </>
-    )
+  grid-template-columns: 1fr 1fr;
   }
 }
 
